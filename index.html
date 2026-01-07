@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Useful Websites</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #FFD700; /* Golden font color */
+            background-color: #000; /* Black background */
+            overflow: hidden; /* Prevent scrollbars from particles */
+        }
+
+        /* Sparkly diamond background effect using CSS particles */
+        .sparkles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #fff 10%, transparent 50%);
+            opacity: 0.5;
+            animation: sparkle 2s infinite ease-in-out;
+            border-radius: 50%; /* Make them diamond-like, but circular for simplicity; adjust for diamond shape if needed */
+            transform: rotate(45deg); /* Rotate to make square look diamond */
+        }
+
+        @keyframes sparkle {
+            0% { opacity: 0; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1) rotate(180deg); }
+            100% { opacity: 0; transform: scale(0) rotate(360deg); }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .readme-section {
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .readme {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .ad-section {
+            margin-top: 50px;
+            height: 100px; /* Placeholder height for ad */
+            background: #333; /* Dark placeholder */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+        }
+
+        .buy-me-coffee {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sparkles"></div> <!-- Container for sparkles -->
+
+    <div class="container">
+        <h1>Top 10 Useful Websites</h1>
+        <ul>
+            <li><a href="https://www.wikipedia.org/" target="_blank">Wikipedia - Free encyclopedia</a></li>
+            <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy - Free online courses</a></li>
+            <li><a href="https://www.duolingo.com/" target="_blank">Duolingo - Learn languages for free</a></li>
+            <li><a href="https://www.canva.com/" target="_blank">Canva - Graphic design tool</a></li>
+            <li><a href="https://www.trello.com/" target="_blank">Trello - Project management</a></li>
+            <li><a href="https://www.notion.so/" target="_blank">Notion - All-in-one workspace</a></li>
+            <li><a href="https://www.slack.com/" target="_blank">Slack - Team communication</a></li>
+            <li><a href="https://www.zoom.us/" target="_blank">Zoom - Video conferencing</a></li>
+            <li><a href="https://www.github.com/" target="_blank">GitHub - Code hosting</a></li>
+            <li><a href="https://www.stackoverflow.com/" target="_blank">Stack Overflow - Developer Q&A</a></li>
+        </ul>
+
+        <div class="readme-section">
+            <h2>Website Readmes</h2>
+            <div class="readme">
+                <h3>Wikipedia Readme</h3>
+                <p>Insert detailed readme or description here. You can add as much text as needed for each website's readme.</p>
+            </div>
+            <div class="readme">
+                <h3>Khan Academy Readme</h3>
+                <p>Insert detailed readme or description here...</p>
+            </div>
+            <!-- Add more .readme divs for each of the 10 websites as needed -->
+        </div>
+
+        <div class="ad-section">
+            <!-- Google AdSense Placeholder -->
+            <p>Google Ad Placeholder - Insert your AdSense code here</p>
+            <!-- Example AdSense code (replace with your own):
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            -->
+        </div>
+
+        <div class="buy-me-coffee">
+            <a href="https://www.buymeacoffee.com/yourusername" target="_blank">Buy Me a Coffee</a> <!-- Replace with your actual Buy Me a Coffee link -->
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to generate sparkly particles
+        const sparklesContainer = document.querySelector('.sparkles');
+        const numParticles = 50; // Adjust for more/less sparkles
+
+        for (let i = 0; i < numParticles; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.top = `${Math.random() * 100}%`;
+            particle.style.animationDelay = `${Math.random() * 2}s`;
+            particle.style.animationDuration = `${2 + Math.random() * 3}s`; // Vary duration
+            sparklesContainer.appendChild(particle);
+        }
+    </script>
+</body>
+</html>
